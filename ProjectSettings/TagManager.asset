@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ground
+  - Wall
+  - Spike
+  - Apple
+  - Plataform Limit
+  - Plataform
+  - Enemy
+  - AppleProjectiles
+  - Upgrade
+  - Destroy Player
+  - CamController
+  - Pause
+  - Tutorial0
+  - Tutorial1
+  - Tutorial2
+  - Tutorial3
+  - Tutorial4
+  - Objective
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Wall
+  - Shadow
+  - Plataform
+  - Player Ignore
+  - Enemy
+  - Enemy Limit
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: HUD
+    uniqueID: 1705897509
+    locked: 0
