@@ -243,7 +243,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'q or button Y to eat Apple   '
+  m_Text: 'Q eat Apple   '
 --- !u!222 &2502027
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14022,7 +14022,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: e or button X to thorw apple
+  m_Text: E to thorw apple
 --- !u!222 &1094082852
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14230,6 +14230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -15168,6 +15169,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1476365557
 Canvas:
   m_ObjectHideFlags: 0
@@ -15691,7 +15693,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'unlocked run
 
-    Left shift or rt to run'
+    Left shift to run'
 --- !u!222 &1749294974
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17672,9 +17674,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'AWSD or left  joystick analog to move
+  m_Text: 'AWSD to move
 
-    space or A to jump'
+    space to jump'
 --- !u!224 &684339162479182948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17761,6 +17763,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &684339162479182971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18142,6 +18145,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!1 &709962512217924324
 GameObject:
   m_ObjectHideFlags: 0
@@ -18723,6 +18727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}

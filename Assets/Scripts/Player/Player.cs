@@ -45,6 +45,7 @@ public class Player : MonoBehaviour
     GameManager gameManager;
     HUD hud;
 
+    bool inWallJump;
 
     void Start()
     {
@@ -63,14 +64,14 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(gameManager.currentGameState == GameState.Gameplay)
+        if (gameManager.currentGameState == GameState.Gameplay)
         {
 
-        Jump();
-        Movement();
-        PlayerAnimatior();
-        Attack();
-        Dead();
+            Jump();
+            Movement();
+            PlayerAnimatior();
+            Attack();
+            Dead();
         }
         if (!inWall)
         {
@@ -109,17 +110,23 @@ public class Player : MonoBehaviour
         }
         if (gameManager.wallJump)
         {
-        if(inWall && Input.GetButtonDown("Jump"))
-        {
-                h = 0;
-            inWall = false;
-            rig.AddForce(new Vector2(1000 * direction * -1, jumpForce * 10));
-        }
+            if (inWall && Input.GetButtonDown("Jump"))
+            {
+                StartCoroutine(nameof(JumpWall));
+                h = transform.localScale.x * -1;
+                Flip((int)h);
+                inWall = false;
+                rig.AddForce(new Vector2(jumpForce * h * 4, jumpForce * 12));
+            }
         }
     }
     void Movement()
     {
-        h = Input.GetAxis("Horizontal");
+        if(!inWallJump)
+        {
+            h = Input.GetAxis("Horizontal");
+        }
+
         run = 1;
         if (gameManager.speedUpgrade && (Input.GetButton("Run")))
         {
@@ -287,7 +294,6 @@ public class Player : MonoBehaviour
             case "Wall":
                 if (!IsGround())
                 {
-                   
                     StartCoroutine(nameof(HoldWall));
                 }
                 break;
@@ -302,8 +308,6 @@ public class Player : MonoBehaviour
                     StartCoroutine(nameof(HitTime));
                 }
                 break;
-           
-
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -311,6 +315,7 @@ public class Player : MonoBehaviour
         switch (collision.collider.tag)
         {
             case "Wall":
+                StopCoroutine(nameof(HoldWall));
                 inWall = false;
                 break;
         }
@@ -340,6 +345,12 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(1);
         hited = false;
         
+    }
+    IEnumerator JumpWall()
+    {
+        inWallJump = true;
+        yield return new WaitForSeconds(0.5f);
+        inWallJump = false;
     }
 }
 
